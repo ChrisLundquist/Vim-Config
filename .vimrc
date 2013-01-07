@@ -1,4 +1,5 @@
 " Configuration file for vim
+call pathogen#infect()
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
@@ -18,6 +19,14 @@ set tabstop=4
 set shiftwidth=4
 set et
 set spell spelllang=en_us
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellRate
+hi clear SpellLocal
+hi SpellBad cterm=undercurl
+hi SpellCap cterm=undercurl
+hi SpellRare cterm=undercurl
+hi SpellLocal cterm=undercurl
 
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
